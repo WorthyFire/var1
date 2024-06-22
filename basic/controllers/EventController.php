@@ -10,14 +10,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
-/**
- * EventController implements the CRUD actions for Event model.
- */
+
 class EventController extends Controller
 {
-    /**
-     * @inheritDoc
-     */
     public function behaviors()
     {
         return [
@@ -67,12 +62,6 @@ class EventController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
-
-    /**
-     * Creates a new Event model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return string|\yii\web\Response
-     */
     public function actionCreate()
     {
         $model = new Event();
@@ -90,13 +79,6 @@ class EventController extends Controller
         ]);
     }
 
-    /**
-     * Updates an existing Event model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $id
-     * @return string|\yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
@@ -110,13 +92,6 @@ class EventController extends Controller
         ]);
     }
 
-    /**
-     * Deletes an existing Event model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $id
-     * @return \yii\web\Response
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
@@ -124,13 +99,6 @@ class EventController extends Controller
         return $this->redirect(['index']);
     }
 
-    /**
-     * Finds the Event model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id
-     * @return Event the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Event::findOne(['id' => $id])) !== null) {

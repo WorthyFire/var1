@@ -8,9 +8,6 @@ use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 
-/**
- * SiteController handles site requests.
- */
 class SiteController extends Controller
 {
     /**
@@ -42,21 +39,11 @@ class SiteController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
     public function actionIndex()
     {
         return $this->render('index');
     }
 
-    /**
-     * Login action.
-     *
-     * @return string|\yii\web\Response
-     */
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -74,11 +61,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Logout action.
-     *
-     * @return \yii\web\Response
-     */
     public function actionLogout()
     {
         Yii::$app->user->logout();
