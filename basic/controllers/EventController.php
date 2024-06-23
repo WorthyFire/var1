@@ -34,11 +34,6 @@ class EventController extends Controller
         ];
     }
 
-    /**
-     * Lists all Event models.
-     *
-     * @return string
-     */
     public function actionIndex()
     {
         $searchModel = new EventSearch();
@@ -50,12 +45,6 @@ class EventController extends Controller
         ]);
     }
 
-    /**
-     * Displays a single Event model.
-     * @param int $id
-     * @return string
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     public function actionView($id)
     {
         return $this->render('view', [

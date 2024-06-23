@@ -2,8 +2,7 @@
 
 use yii\helpers\Html;
 
-/** @var yii\web\View $this */
-/** @var app\models\Contact $model */
+
 
 $this->title = 'Создание контакта';
 $this->params['breadcrumbs'][] = ['label' => 'Contacts', 'url' => ['index']];

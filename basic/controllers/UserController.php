@@ -10,9 +10,6 @@ use yii\filters\VerbFilter;
 
 class UserController extends Controller
 {
-    /**
-     * @inheritDoc
-     */
     public function behaviors()
     {
         return array_merge(

@@ -4,10 +4,6 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\ContactSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
 $this->title = 'Контакты';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

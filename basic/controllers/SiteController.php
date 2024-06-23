@@ -10,9 +10,6 @@ use app\models\LoginForm;
 
 class SiteController extends Controller
 {
-    /**
-     * @inheritDoc
-     */
     public function behaviors()
     {
         return [

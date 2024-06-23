@@ -31,7 +31,6 @@ class User extends ActiveRecord implements IdentityInterface
 
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        // реализация метода для токена (опционально)
         return null;
     }
 
@@ -47,13 +46,11 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function getAuthKey()
     {
-        // реализация метода (опционально)
         return null;
     }
 
     public function validateAuthKey($authKey)
     {
-        // реализация метода (опционально)
         return null;
     }
 
